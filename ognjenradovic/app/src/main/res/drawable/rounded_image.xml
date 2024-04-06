@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp" /> <!-- Adjust the radius as needed -->
+            <solid android:color="@android:color/transparent" /> <!-- Transparent background -->
+        </shape>
+    </item>
+    <item android:id="@+id/content">
+        <bitmap android:src="@drawable/bg" /> <!-- The image to be displayed -->
+    </item>
+</layer-list>

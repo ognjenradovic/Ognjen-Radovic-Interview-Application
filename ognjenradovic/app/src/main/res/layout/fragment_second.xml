@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginBottom="10dp"
+            android:padding="0dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/round"
+                    android:cropToPadding="false"
+                    android:padding="0dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="Microsoft"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/applyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/button_primary"
+                    android:text="Apply"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/shareButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_primary"
+                    android:text="Share"
+                    android:textColor="@color/white" />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/iconButton"-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:src="@drawable/baseline_share_24" />-->
+
+
+<!--                android:background="@drawable/button_primary"-->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/positionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dp"
+                android:text="Pozicija"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/positionName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="7dp"
+                android:text="Senior Frontend Developer"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/incomeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dp"
+                android:text="Mesečna zarada"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/incomeAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="7dp"
+                android:text="900€ - 1400€"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/techStackLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8dp"
+                android:text="Neophodne tehnologije"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="2"
+                android:useDefaultMargins="false">
+
+                <!-- First TextView in the first row -->
+
+                <!-- Second TextView in the first row -->
+                <TextView
+                    android:id="@+id/tech2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round_gray"
+                    android:padding="4dp"
+                    android:paddingStart="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="13dp"
+                    android:text="JavaScript"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <!-- First TextView in the second row -->
+                <TextView
+                    android:id="@+id/tech3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round_gray"
+                    android:padding="4dp"
+                    android:paddingStart="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="13dp"
+                    android:text="JavaScript"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <!-- Second TextView in the second row -->
+                <TextView
+                    android:id="@+id/tech4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round_gray"
+                    android:padding="4dp"
+                    android:paddingStart="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="13dp"
+                    android:text="JavaScript"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tech5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round_gray"
+                    android:padding="4dp"
+                    android:paddingStart="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="13dp"
+                    android:text="JavaScript"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <!-- Second TextView in the second row -->
+                <TextView
+                    android:id="@+id/tech6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round_gray"
+                    android:padding="4dp"
+                    android:paddingStart="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="13dp"
+                    android:text="JavaScript"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+            </GridLayout>
+            <!--        <TextView-->
+            <!--            android:id="@+id/techStack"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="bottom"-->
+            <!--            android:text="Experience as a Senior JavaScript Developer with front-end focus.-->
+            <!--Strong skills in vanilla JavaScript, HTML, and CSS."-->
+            <!--            android:textColor="@color/black"-->
+            <!--            android:layout_marginBottom="7dp"-->
+            <!--            android:textSize="16sp" />-->
+
+            <TextView
+                android:id="@+id/jobDescriptionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="Opis pozicije"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/jobDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="7dp"
+                android:text="We are looking for a Senior Solution Engineer to be part of our team of 5 developers who work on the Microsoft Power platform. You will be expected to both deliver business consultancy, as well as deliver solution architecture, that links our IT business platform and existing business process requirements.
+
+If you have a great interest in low-code and no-code platforms and possess good technical and communicational skills within the MS Power Platform."
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/companyLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="7dp"
+                android:text="O kompaniji"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/round"
+                    android:cropToPadding="false"
+                    android:padding="0dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/companyName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="Microsoft"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/companyDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dp"
+                android:text="We are looking for a Senior Solution Engineer to be part of our team of 5 developers who work on the Microsoft Power platform. You will be expected to both deliver business consultancy, as well as deliver solution architecture, that links our IT business platform and existing business process requirements."
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/applyButton2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_primary"
+                android:text="Apply "
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/shareButton2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_primary"
+                android:text="Share "
+                android:textColor="@color/white" />
+
+
+            <!--        <TextView-->
+            <!--            android:id="@+id/bulletList"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:text="@string/bullet_list_text"-->
+            <!--            android:textColor="@android:color/black"-->
+            <!--            android:textSize="16sp" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
