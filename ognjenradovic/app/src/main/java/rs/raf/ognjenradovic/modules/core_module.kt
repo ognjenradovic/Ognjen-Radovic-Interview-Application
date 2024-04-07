@@ -1,11 +1,16 @@
 package rs.raf.ognjenradovic.modules
 
 import JobRepositoryImpl
+//import JobService
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.room.Room
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
+//import io.ktor.client.*
+//import io.ktor.client.engine.android.*
+//import io.ktor.client.plugins.*
+//import io.ktor.http.*
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidApplication
@@ -34,6 +39,7 @@ val coreModule = module(override = true) {
         .fallbackToDestructiveMigration()
         .build() }
 
+//    single { createKtorClient() }
     single { createJobRetrofit(moshi = get(), httpClient = get()) }
     single { createMoshi() }
     viewModel { MainViewModel(jobRepository=get()) }
@@ -47,11 +53,21 @@ val coreModule = module(override = true) {
 
 }
 
+
 fun createMoshi(): Moshi {
     return Moshi.Builder()
         .add(Date::class.java, Rfc3339DateJsonAdapter())
         .build()
 }
+
+//TODO Vrati
+//fun createKtorClient(): HttpClient {
+//    return HttpClient(Android) {
+//        install(DefaultRequest) {
+//            headers.append(HttpHeaders.ContentType, ContentType.Application.Json)
+//        }
+//    }
+//}
 
 fun createJobService(retrofit: Retrofit): JobService {
     return retrofit.create(JobService::class.java)
@@ -59,12 +75,13 @@ fun createJobService(retrofit: Retrofit): JobService {
 
 fun createJobRetrofit(moshi: Moshi, httpClient: OkHttpClient): Retrofit {
     return Retrofit.Builder()
-        .baseUrl("https://c051d8b188ea43ac9680529542d1dd51.api.mockbin.io/")
+        .baseUrl("https://5577109ba710441aaa22096592775b26.api.mockbin.io/")
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
         .client(httpClient)
         .build()
 }
+
 
 fun createOkHttpClient(): OkHttpClient {
     val httpClient = OkHttpClient.Builder()

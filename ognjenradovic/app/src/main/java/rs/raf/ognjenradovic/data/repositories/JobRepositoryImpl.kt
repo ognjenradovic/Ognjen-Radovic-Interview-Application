@@ -34,6 +34,10 @@ class JobRepositoryImpl(
             }
     }
 
+//    override fun fetchAll(): Observable<Resource<Unit>> {
+//        // Implementation for fetching data from remote and local sources
+//    }
+
     override fun getAll(): Observable<JobWrapper> {
         return localDataSource
             .getAllJobs()

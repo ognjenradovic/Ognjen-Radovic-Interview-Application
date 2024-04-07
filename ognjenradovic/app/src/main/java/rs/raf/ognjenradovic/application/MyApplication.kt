@@ -10,8 +10,11 @@ import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 import org.koin.dsl.module
 import rs.raf.ognjenradovic.modules.coreModule
-import rs.raf.ognjenradovic.modules.mealsModule
 import rs.raf.ognjenradovic.presentation.view.fragments.ui.viewmodel.SecondViewModel
+//import io.ktor.client.*
+//import io.ktor.client.engine.cio.*
+//import io.ktor.client.request.*
+//import io.ktor.client.statement.*
 
 class MyApplication : Application() {
 
@@ -25,6 +28,14 @@ class MyApplication : Application() {
         initKoin()
     }
 
+
+//    suspend fun main() {
+//        val client = HttpClient(CIO)
+//        val response: HttpResponse = client.get("https://ktor.io/")
+//        println(response.status)
+//        client.close()
+//    }
+
     private fun initTimber() {
         //Timber.plant(Timber.DebugTree())
     }
@@ -32,7 +43,7 @@ class MyApplication : Application() {
     private fun initKoin() {
 
         val modules = listOf(
-            coreModule, mealsModule
+            coreModule
         )
         startKoin {
             androidLogger(Level.ERROR)

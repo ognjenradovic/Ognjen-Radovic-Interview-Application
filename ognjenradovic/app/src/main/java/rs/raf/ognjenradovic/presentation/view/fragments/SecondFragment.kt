@@ -85,6 +85,7 @@ class SecondFragment : Fragment() {
                     if (techArray.size >= 5) binding.tech6.text = techArray[4]
                     binding.jobDescription.text = it.description
                     binding.companyName1.text = it.companyName
+                    binding.textView1.text=it.companyName
                     binding.companyDescription.text = it.companyDescription
 
                     Picasso.get().load(job.imageURL).into(binding.imageView1)
